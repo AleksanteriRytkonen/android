@@ -2,7 +2,9 @@ package com.example.allu.ostoslista;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.view.View;
 import android.webkit.WebView;
+import android.widget.Button;
 
 public class Ohje extends AppCompatActivity {
 
@@ -12,6 +14,15 @@ public class Ohje extends AppCompatActivity {
         setContentView(R.layout.activity_ohje);
         WebView helpWebView;
         helpWebView = (WebView) findViewById(R.id.webView);
-        helpWebView.loadUrl("file:///android_asset/index.html");
+        helpWebView.loadUrl("file:///android_asset/ohje.html");
+
+        Button btnSulje = (Button) findViewById(R.id.btnSulje);
+        btnSulje.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                finish();
+                System.exit(0);
+            }
+        });
     }
 }

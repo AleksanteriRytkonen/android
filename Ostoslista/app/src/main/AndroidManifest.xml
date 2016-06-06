@@ -21,7 +21,8 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".UusiOstos"></activity>
+        <activity android:name=".Ostoslista" />
+        <activity android:name=".UusiOstos" />
         <activity android:name=".Ohje"></activity>
     </application>
 

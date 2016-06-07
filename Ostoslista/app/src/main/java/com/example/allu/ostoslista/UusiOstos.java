@@ -15,14 +15,18 @@ import android.widget.Toast;
 public class UusiOstos extends AppCompatActivity {
 
 
-    public static final String MyPREFERENCES = "MyPrefs";
-    public static final String Ruoka = "foodKey";
+    //public static final String MyPREFERENCES = "MyPrefs";
+    //public static final String Ruoka = "foodKey";
     public SharedPreferences sharedpreferences;
+    public OmaDbAdapteri omadb;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_uusi_ostos);
+
+
+        omadb = new OmaDbAdapteri(getApplicationContext());
         Button lisaa = (Button) findViewById(R.id.btnLisaa);
         assert lisaa != null;
 
@@ -33,7 +37,7 @@ public class UusiOstos extends AppCompatActivity {
         final Context context = getApplicationContext();
         final String viesti = "Et lisännyt mitään";
         final int duration = Toast.LENGTH_LONG;
-        sharedpreferences = getApplicationContext().getSharedPreferences(MyPREFERENCES, MODE_PRIVATE);
+        //sharedpreferences = getApplicationContext().getSharedPreferences(MyPREFERENCES, MODE_PRIVATE);
 
 
         lisaa.setOnClickListener(new View.OnClickListener() {
@@ -57,11 +61,11 @@ public class UusiOstos extends AppCompatActivity {
                     builder.show();
                 } else {
                     //Ostoslista.ostokset.add(ruoka);
-
+/*
                     SharedPreferences.Editor editor = sharedpreferences.edit();
                     editor.putString(Ruoka, ruoka);
                     editor.apply();
-
+*/                  omadb.suoritaInsert(ruoka);
                     startActivity(os);
                 }
             }

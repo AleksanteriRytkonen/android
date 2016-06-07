@@ -1,4 +1,6 @@
 <resources>
     <string name="app_name">Ostoslista</string>
     <string name="Ostoslista">Ostoslista</string>
+    <string name="Lisää">Lisää</string>
+    <string name="sulje">Sulje</string>
 </resources>

@@ -20,7 +20,9 @@
             android:id="@+id/addFood"
             android:layout_weight="7.25"
             android:layout_alignParentTop="true"
-            android:layout_centerHorizontal="true" />
+            android:layout_centerHorizontal="true"
+            android:hint="Lisää tavara"
+            />
 
         <Button
             android:layout_width="wrap_content"

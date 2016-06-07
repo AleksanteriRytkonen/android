@@ -17,39 +17,34 @@ public class Ostoslista extends ListActivity {
 
 
     public static ArrayList<String> ostokset = new ArrayList<>();
-    public SharedPreferences sharedpreferences;
+    public OmaDbAdapteri omadb;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_ostoslista);
 
-        //SharedPreferences prefs = getSharedPreferences(UusiOstos.MyPREFERENCES, Context.MODE_PRIVATE);
-       //// String ruoka = prefs.getString("Ruoka", null);
-       // ostokset.add(ruoka);
+        omadb = new OmaDbAdapteri(getApplicationContext());
 
+        if(omadb.haeKaikki() != null && omadb.haeKaikki().size() > 0) {
+            ostokset = omadb.haeKaikki();
+        }
 
-        SharedPreferences sharedPreferences=getSharedPreferences("MyPrefs", Context.MODE_PRIVATE);
-        //String ruoka = sharedPreferences.getString("foodKey", "");
+        /*SharedPreferences sharedPreferences=getSharedPreferences("MyPrefs", Context.MODE_PRIVATE);
 
         Map<String, ?> allEntries = sharedPreferences.getAll();
         for(Map.Entry<String, ?> entry : allEntries.entrySet()) {
             ostokset.add(entry.getValue().toString());
         }
+        */
 
-
-        //String ruoat = sharedPreferences.getAll().values().toString();
-        //ostokset.add(ruoat);
 
        if(ostokset != null && ostokset.size() > 0) {
             setListAdapter(new ArrayAdapter<>(this, android.R.layout.simple_list_item_1,ostokset.toArray(new String[1])));
         }
 
     }
-    public void load(View view) {
-        //SharedPreferences sharedPreferences=getSharedPreferences("MyPrefs", Context.MODE_PRIVATE);
-        //String ruoka = sharedPreferences.getString("foodKey", "");
-    }
+
 
 
 }

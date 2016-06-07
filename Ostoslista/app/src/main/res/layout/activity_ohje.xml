@@ -23,7 +23,7 @@
         <Button
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="sulje"
+            android:text="@string/sulje"
             android:id="@+id/btnSulje"
             android:layout_below="@+id/webView"
             android:layout_centerHorizontal="true"

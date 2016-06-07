@@ -17,11 +17,11 @@ public class Ohje extends AppCompatActivity {
         helpWebView.loadUrl("file:///android_asset/ohje.html");
 
         Button btnSulje = (Button) findViewById(R.id.btnSulje);
+        assert btnSulje != null;
         btnSulje.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 finish();
-                System.exit(0);
             }
         });
     }

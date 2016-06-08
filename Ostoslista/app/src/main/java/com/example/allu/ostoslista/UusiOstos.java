@@ -66,6 +66,7 @@ public class UusiOstos extends AppCompatActivity {
                     editor.putString(Ruoka, ruoka);
                     editor.apply();
 */                  omadb.suoritaInsert(ruoka);
+                    omadb.puraKantayhteys();
                     startActivity(os);
                 }
             }

@@ -28,6 +28,7 @@ public class Ostoslista extends ListActivity {
 
         if(omadb.haeKaikki() != null && omadb.haeKaikki().size() > 0) {
             ostokset = omadb.haeKaikki();
+            omadb.puraKantayhteys();
         }
 
         /*SharedPreferences sharedPreferences=getSharedPreferences("MyPrefs", Context.MODE_PRIVATE);

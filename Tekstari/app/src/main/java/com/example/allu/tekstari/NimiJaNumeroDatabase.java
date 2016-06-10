@@ -77,6 +77,21 @@ public class NimiJaNumeroDatabase {
         this.db.delete(TIETOKANTATAULU, null, null);
     }
 /*TEE TOINEN HAKULAUSE PELKKIÄ NUMEROITA VARTEN, JOTTA ITSE TEKSTARIT VOIDAAN LÄHETTÄÄ. */
+
+    public ArrayList<String> haeNumerot() {
+        ArrayList<String> numerot = new ArrayList<>();
+        Cursor cursor = this.db.query(TIETOKANTATAULU, new String[] { "numero" }, null, null, null, null, "nimi desc");
+        if(cursor.moveToFirst()) {
+            do {
+                numerot.add(cursor.getString(0));
+            } while (cursor.moveToNext());
+        }
+        if(cursor != null && !cursor.isClosed()) {
+            cursor.close();
+        }
+        return numerot;
+    }
+
     public ArrayList<String> haeKaikki() {
         ArrayList<String> nimetJaNumerot = new ArrayList<String>();
         Cursor cursor = this.db.query(TIETOKANTATAULU, new String[] { "nimi", "numero" },

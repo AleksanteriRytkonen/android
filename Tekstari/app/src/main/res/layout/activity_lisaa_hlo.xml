@@ -9,4 +9,57 @@
     android:paddingTop="@dimen/activity_vertical_margin"
     tools:context="com.example.allu.tekstari.LisaaHlo">
 
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="Nimi"
+        android:id="@+id/textView"
+        android:layout_alignParentTop="true"
+        android:layout_alignLeft="@+id/editNimi"
+        android:layout_alignStart="@+id/editNimi" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="Numero"
+        android:id="@+id/textView2"
+        android:layout_marginRight="82dp"
+        android:layout_marginEnd="82dp"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/editNimi"
+        android:layout_marginTop="29dp"
+        android:minWidth="100dp"
+        android:layout_below="@+id/textView"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginLeft="30dp"
+        android:layout_marginStart="30dp" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/editNumero"
+        android:minWidth="100dp"
+        android:layout_alignTop="@+id/editNimi"
+        android:layout_alignLeft="@+id/textView2"
+        android:layout_alignStart="@+id/textView2" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Lisää hlo"
+        android:id="@+id/btnHloLisays"
+        android:layout_marginTop="49dp"
+        android:layout_below="@+id/editNumero"
+        android:layout_alignRight="@+id/editNumero"
+        android:layout_alignEnd="@+id/editNumero" />
+
 </RelativeLayout>

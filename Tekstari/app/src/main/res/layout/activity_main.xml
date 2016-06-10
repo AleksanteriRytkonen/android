@@ -12,19 +12,53 @@
     <LinearLayout
         android:orientation="vertical"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_height="wrap_content"
         android:layout_centerHorizontal="true"
-        android:layout_alignParentTop="true">
-
-        <Button
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Lisää hlö"
-            android:id="@+id/btnLisaa" />
+        android:layout_below="@+id/btnPoista"
+        android:id="@+id/linearLayout">
 
         <ListView
             android:layout_width="368dp"
-            android:layout_height="wrap_content"
+            android:layout_height="306dp"
             android:id="@android:id/list" />
+
     </LinearLayout>
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Poista kaikki"
+        android:id="@+id/btnPoista"
+        android:layout_gravity="right"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Lisää hlö"
+        android:id="@+id/btnLisaa" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Lähetä"
+        android:id="@+id/btnLaheta"
+        android:layout_gravity="right"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/editLaheta"
+        android:layout_alignTop="@+id/btnLaheta"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_toLeftOf="@+id/btnPoista"
+        android:layout_toStartOf="@+id/btnPoista"
+        android:hint="Kirjoita viesti tähän.." />
+
 </RelativeLayout>

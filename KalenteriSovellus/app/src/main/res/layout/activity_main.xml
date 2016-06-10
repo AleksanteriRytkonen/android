@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="com.example.allu.kalenterisovellus.MainActivity">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_centerVertical="true"
+        android:layout_centerHorizontal="true"
+        android:background="@drawable/roundedcorner"
+        android:weightSum="1">
+
+        <TextView
+            android:layout_width="358dp"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:text="Maanantai"
+            android:background="#ADBEDE"
+            android:id="@+id/textViewMa"
+            android:layout_gravity="center_horizontal"
+            android:layout_weight="0.12"
+            android:linksClickable="true"
+            android:textAlignment="center"
+            android:gravity="center_vertical" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:background="#AED5EB"
+            android:text="Tiistai"
+            android:id="@+id/textViewTi"
+            android:layout_weight="0.12"
+            android:linksClickable="true"
+            android:textAlignment="center"
+            android:gravity="center_vertical" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:background="#ADBEDE"
+            android:text="Keskiviikko"
+            android:id="@+id/textViewKe"
+            android:layout_weight="0.12"
+            android:linksClickable="true"
+            android:textAlignment="center"
+            android:gravity="center_vertical" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:background="#AED5EB"
+            android:text="Torstai"
+            android:id="@+id/textViewTo"
+            android:layout_weight="0.12"
+            android:linksClickable="true"
+            android:textAlignment="center"
+            android:gravity="center_vertical" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:background="#ADBEDE"
+            android:text="Perjantai"
+            android:id="@+id/textViewPe"
+            android:layout_weight="0.12"
+            android:linksClickable="true"
+            android:textAlignment="center"
+            android:gravity="center_vertical" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:background="#AED5EB"
+            android:text="Lauantai"
+            android:id="@+id/textViewLa"
+            android:layout_weight="0.12"
+            android:linksClickable="true"
+            android:textAlignment="center"
+            android:gravity="center_vertical" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:background="#ADBEDE"
+            android:text="Sunnuntai"
+            android:id="@+id/textViewSu"
+            android:layout_weight="0.12"
+            android:linksClickable="true"
+            android:textAlignment="center"
+            android:gravity="center_vertical" />
+    </LinearLayout>
+
+</RelativeLayout>
